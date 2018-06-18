@@ -1,0 +1,99 @@
+group 'testGroup'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'kotlin'
+
+sourceCompatibility = 1.8
+
+ext {
+
+    //Base
+    androidSupportVersion = '27.1.1'
+    buildToolsVersion = '27.0.3'
+    compileSdkVersion = 27
+    constraintLayouTVersion = '1.1.0-beta5'
+    minSdkVersion = 22
+    multidexVersion = '1.0.3'
+    playServiceVersion = '11.8.0'
+    targetSdkVersion = 22
+
+    //Dependency
+    acraVersion = '4.10.0'
+    androidAnnotationsVersion = '4.4.0'
+    androidLoggerVersion = '1.3.5'
+    butterKnifeVersion = '8.4.0'
+    commonsCodecVersion = '1.4'
+    commonsIoVersion = '2.5'
+    commonsLang3Version = '3.0'
+    crashlyticsVersion = '2.6.7'
+    daggerVersion = '2.14.1'
+    expandableRecyclerviewVersion = '1.0'
+    expandableCheckRecyclerviewVersion = '1.4'
+    glideVersion = '3.7.0'
+    gpuimageVideorecordingVersion = 'v1.4.3'
+    icePickVersion = '3.2.0'
+    jacksonVersion = '2.9.0'
+    jacksonAslVersion = '1.9.5'
+    jobqueueVersion = '2.0.1'
+    loggingInterceptorVersion = '3.4.2'
+    nispokSnackbarVersion = '2.11.0'
+    okHttpVersion = '3.4.2'
+    mviLee = '1.0.0'
+    mosbyVersion = '3.1.0'
+    processPhoenixVersion = '2.0.0'
+    retrofitVersion = '2.2.0'
+    rxandroid2Version = '2.0.1'
+    rxkotlin2Version = '2.1.0'
+    rxjava2Version = '2.1.6'
+    rxbinding2Version = '2.1.0'
+    stethoVersion = '1.4.2'
+    telegramgalleryVersion = '1.0.3'
+
+    //Test
+    junitVersion = '4.12'
+    mokitoVersion = '2.8.47'
+
+    //Altraix-libs
+    madiCoreVersion = '0.0.6-SNAPSHOT'
+    marmMapLibVersion = '0.0.6-SNAPSHOT'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava2Version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid2Version"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin2Version"
+    implementation "com.jakewharton.rxbinding2:rxbinding:$rxbinding2Version"
+    implementation "com.jakewharton.rxbinding2:rxbinding-kotlin:$rxbinding2Version"
+    implementation "com.jakewharton.rxbinding2:rxbinding-support-v4-kotlin:$rxbinding2Version"
+    implementation "com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:$rxbinding2Version"
+    implementation "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7-kotlin:$rxbinding2Version"
+}
+buildscript {
+    ext.kotlin_version = '1.2.41'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+
+}
+
