@@ -69,11 +69,6 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:$rxjava2Version"
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid2Version"
     implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin2Version"
-    implementation "com.jakewharton.rxbinding2:rxbinding:$rxbinding2Version"
-    implementation "com.jakewharton.rxbinding2:rxbinding-kotlin:$rxbinding2Version"
-    implementation "com.jakewharton.rxbinding2:rxbinding-support-v4-kotlin:$rxbinding2Version"
-    implementation "com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:$rxbinding2Version"
-    implementation "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7-kotlin:$rxbinding2Version"
 }
 buildscript {
     ext.kotlin_version = '1.2.41'
